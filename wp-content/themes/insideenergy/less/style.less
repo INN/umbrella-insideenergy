@@ -1,0 +1,133 @@
+/*
+Theme Name:     Inside Energy
+Theme URI:      http://largoproject.org
+Description:    A child theme for Inside Energy based on the Project Largo parent theme.
+Author:         Adam Schweigert/INN
+Author URI:     http://largoproject.org
+Template:       largo
+Version:        0.1.0
+*/
+
+@import "variables.less"; // from Largo
+@import "mixins.less"; // from Largo
+@import "_vars.less";
+@import "iframe-page.less";
+@import "category-ie-investigations.less";
+
+@import "navbar-common.less"; // from Largo
+@import "navbar-sticky.less"; // from Largo
+@import "navbar.less";
+
+#site-header {
+  margin: 5px 0;
+  img {
+    margin-bottom: 0;
+  }
+}
+#main-nav.navbar {
+  border-top: none;
+}
+.navbar-inner {
+  text-transform: uppercase;
+}
+
+#homepage-featured {
+  margin-bottom: 24px;
+  border: 1px solid #ddd;
+  border-bottom: 5px solid #ddd;
+  padding: 12px;
+  box-sizing: border-box;
+  img,
+  h2,
+  p {
+    margin-bottom: 12px;
+  }
+}
+/**
+ * Styles for the second widget area on the homepage
+ */
+#homepage-bottom {
+  .widget-1 {
+	background-color: #efefef;
+	.widgettitle {
+      background-color: @orange;
+      color: #fff;
+    }
+  }
+  .widget-2 {
+    background-color: #efefef;
+    .widgettitle {
+      background-color: #cdcdcd;
+      color: #333;
+    }
+  }
+}
+#homepage-bottom .widgettitle,
+#sidebar .rev .widgettitle,
+.page-template-iframe-php .widgettitle {
+  text-align: center;
+  border: none;
+  padding: 5px 0;
+  font-size: 18px !important;
+  margin-bottom: 12px;
+}
+.widget.largo-recent-posts li {
+  margin-bottom: 0;
+}
+.widget.rev .morelink {
+  margin-bottom: 1em;
+}
+#sidebar .widget {
+  padding-left: 0;
+}
+#site-footer .widgettitle,
+#site-footer li.menu-label {
+  color: @orange;
+}
+
+
+/**
+ * Styles for the sponsors list abov ethe footer
+ */
+.super-footer {
+  height: auto;
+  clear: both;
+  margin-bottom: 1em;
+  h5 {
+    background-color: @orange;
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 0;
+    text-align: center;
+    font-weight: normal;
+  }
+  .row-fluid {
+    max-width: 1170px;
+    margin: 0 auto;
+    .span2 {
+      width: 10%;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+@media all and (max-width: 768px) {
+  .super-footer .row-fluid .span2 {
+    width: 30%;
+    margin-bottom: 1em;
+  }
+}
+
+#site-footer a,
+#site-footer a:hover {
+  color: #fff;
+}
+
+.entry-content iframe {
+  margin-bottom: 24px;
+}
+.article-bottom .series-label {
+  margin: 0;
+  padding: 0;	
+}
