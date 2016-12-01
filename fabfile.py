@@ -17,13 +17,6 @@ env.hosts = ['localhost', ]
 env.sftp_deploy = True # needed for wpengine
 env.domain = 'insideenergy.dev'
 
-"""
-Add HipChat info to send a message to a room when new code has been deployed.
-"""
-env.hipchat_token = ''
-env.hipchat_room_id = ''
-
-
 # Environments
 @task
 def production():
@@ -37,7 +30,6 @@ def production():
     env.domain      = 'insideenergy.wpengine.com'
     env.port        = '2222'
 
-
 @task
 def staging():
     """
@@ -45,7 +37,7 @@ def staging():
     """
     env.settings    = 'staging'
     env.hosts       = [ os.environ[ 'INSIDEENERGY_STAGING_SFTP_HOST' ], ]   # ssh host for production.
-    env.user        = os.environ[ 'INSIDEENERGY_STAGING_SFTP_USER' ],       # ssh user for production.
+    env.user        = os.environ[ 'INSIDEENERGY_STAGING_SFTP_USER' ]       # ssh user for production.
     env.password    = os.environ[ 'INSIDEENERGY_STAGING_SFTP_PASSWORD' ]    # ssh password for production.
     env.domain      = 'insideenergy.staging.wpengine.com'
     env.port        = '2222'

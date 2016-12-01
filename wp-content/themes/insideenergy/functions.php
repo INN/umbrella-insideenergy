@@ -1,5 +1,17 @@
 <?php
 /**
+ * Constants
+ */
+// This site is an INN Member
+if ( ! defined( 'INN_MEMBER' ) ) {
+        define( 'INN_MEMBER', true );
+}
+// This site is hosted by INN
+if ( ! defined( 'INN_HOSTED' ) ) {
+        define( 'INN_HOSTED', true );
+}	
+
+/**
  * Include theme files
  *
  * Based off of how Largo loads files: https://github.com/INN/Largo/blob/master/functions.php#L358
@@ -19,7 +31,7 @@ function largo_child_require_files() {
 		'/inc/metaboxes.php',
 		'/homepages/layouts/TopStory.php'
 	);
-	foreach ($includes as $include ) {
+	foreach ( $includes as $include ) {
 		require_once( get_stylesheet_directory() . $include );
 	}
 }
