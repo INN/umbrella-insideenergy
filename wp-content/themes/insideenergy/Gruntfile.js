@@ -17,7 +17,7 @@ module.exports = function(grunt) {
         less: {
             development: {
                 options: {
-                    paths: ['less', '../largo-dev/less/inc'],
+                    paths: ['less', '../largo/less/inc'],
                     sourceMap: true,
                     outputSourceFiles: true,
                     sourceMapBasepath: path,
